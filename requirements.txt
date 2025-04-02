@@ -3,3 +3,5 @@ fastapi
 pyvirtualcam
 opencv-python
 ultralytics
+#pytorch
+#torchvision

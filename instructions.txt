@@ -1,0 +1,18 @@
+First Open New Terminal and Select CMD.After Selecting CMD Steps are as follows:-
+
+Step 1 : conda create -n broadcaster python=3.11
+
+Step 2 : conda activate broadcaster
+
+--> For GPU only
+Step 3 : conda install pytorch==2.5.1 torchvision==0.20.1 pytorch-cuda=12.4 -c pytorch -c nvidia
+
+--> For CPU only
+conda install pytorch==2.5.1 torchvision==0.20.1 cpuonly -c pytorch
+
+--> If not GPU, Uncomment torch and torchvision in requirements.txt
+step 4 : pip install -r requirements.txt
+
+
+If Have Used File Name check_camera.py its used to check available cameras in your pc or laptop
+In Terminal Just type:-python check_camera.py (then enter it will show how many are there)
