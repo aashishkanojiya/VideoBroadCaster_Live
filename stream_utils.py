@@ -35,9 +35,14 @@ class Streaming(CustomSegmentationWithYolo):
     def stream_video(self):
         self.running = True
         print(f"Retrieving feed from source({self.input_source}), FPS : {self.fps}, Blur Strength : {self.blur_strength}")
-        cap = cv2.VideoCapture(int(self.input_source))
-        frame_idx = 0
 
+        cap = cv2.VideoCapture(int(self.input_source)) if str(self.input_source).isdigit() else cv2.VideoCapture(self.input_source)
+
+        if not cap.isOpened():
+            print("❌ Error: Unable to open video source")
+            return
+        
+        frame_idx = 0
         width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         
@@ -48,7 +53,7 @@ class Streaming(CustomSegmentationWithYolo):
         if self.fps:
             if self.fps > self.original_fps:
                 self.fps = self.original_fps
-            frame_interval = max(1, int(self.original_fps / self.fps))  # Ensure frame_interval is at least 1
+            frame_interval = max(1, int(self.original_fps / self.fps))
         else:
             frame_interval = 1
 
