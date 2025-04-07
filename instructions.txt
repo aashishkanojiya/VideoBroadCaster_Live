@@ -1,5 +1,7 @@
 First Open New Terminal and Select CMD.After Selecting CMD Steps are as follows:-
+First Download OR Install OBS Studio
 First Make Sure You Have Created Conda Path 
+
 
 Step 1 : cd VIDEOBROADCASTER_LIVE
 
