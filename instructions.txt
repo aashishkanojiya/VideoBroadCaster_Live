@@ -1,6 +1,6 @@
 First Open New Terminal and Select CMD.After Selecting CMD Steps are as follows:-
 First Download OR Install OBS Studio
-First Make Sure You Have Created Conda Path 
+Make Sure You Have Created Conda Path 
 
 
 Step 1 : cd VIDEOBROADCASTER_LIVE
@@ -19,5 +19,5 @@ conda install pytorch==2.5.1 torchvision==0.20.1 cpuonly -c pytorch
 step 5 : pip install -r requirements.txt
 
 
-If Have Used File Name check_camera.py its used to check available cameras in your pc or laptop
-In Terminal Just type:-python check_camera.py (then enter it will show how many are there)
+I Have Used File Name check_camera.py its used to check available cameras in your pc or laptop
+In Terminal Just type:-python check_camera.py (then enter it will show how many camera are there)
